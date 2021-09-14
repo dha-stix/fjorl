@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family:  "Open Sans", sans-serif;
+}
+h2, h3, .nav__items, button {
+    font-family: "Raleway", sans-serif;
+}
+h2 {
+    color: hsl(243, 87%, 12%);
+}
+
+.logo {
+    height: 30px;
+}
+nav {
+    height: 10vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: #fff;
+}
+#nav__links {
+    display: flex;
+    flex: 0.3;
+    align-items: center;
+    justify-content: space-between;
+}
+ul  li {
+    list-style-type: none;
+}
+li a {
+    text-decoration: none;
+    color: hsl(243, 87%, 12%)
+}
+header, main, .signUp--cta {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.header__text, .main__text, .signUp__text {
+    flex: 0.6;
+    padding: 10px;
+}
+.header__text > *, .main__text > *, .signUp__text > * {
+    margin-bottom: 15px;
+}
+.header__svg, .main__svg, .signUp__form {
+    flex: 0.4;
+}
+.header__svg > img, .main__svg > img  {
+    width: 100%;
+}
+.header__input {
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    margin-right: 20px;
+    padding: 10px 10px 10px 20px;
+    outline: none;
+    border: 1px solid hsl(238, 22%, 44%);
+}
+.cta--btn {
+    background-color: hsl(224, 93%, 58%);
+    width: 150px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    transition-property: background;
+}
+.cta--btn:hover {
+    transition-duration: 300ms;
+    background-color: hsl(238, 22%, 44%);
+}
+main {
+    background-image: url("../images/bg-curve-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 100px;
+}
+#cta--works {
+    color:hsl(170, 45%, 43%) ;
+    border: none;
+    font-family: 15px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 5px;
+    border-bottom: 1px solid hsl(170, 45%, 43%);
+    outline: none;
+    background-color: transparent;
+    transition-property: font;
+}
+#cta--works:hover {
+    transition-duration: 100ms;
+    font-size: 16px;
+}
+.quote {
+    margin-top: 30px;
+    width: 350px;
+    height: min-content;
+    height: auto;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 0 15px 0px hsl(224, 56%, 83%);
+    border-radius: 10px;
+}
+#quote__text {
+    font-size: 15px;
+    color: hsl(238, 22%, 44%);
+}
+.quote--author {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+#author__name {
+    font-size: 14px;
+}
+#author__position  {
+    opacity: 0.6;
+    font-size: 12px;
+}
+.quote--author > img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 15px;
+}
+
+footer, #bottom__input, .signUp__form, .footer__nav {
+    width: 100%;
+}
+.signUp--cta {
+    min-height: 300px;
+    background-color: hsl(238, 22%, 44%);
+}
+.signUp__text > h3 {
+    color: hsl(240, 75%, 98%);
+}
+.signUp__text > p {
+    color: hsl(0, 0%, 75%);
+}
+.signUp__form {
+    display: flex;
+    flex-direction: column
+}
+#bottom__input {
+    margin-bottom: 15px;
+}
+#bottom__btn:hover {
+    background-color: hsl(170, 45%, 43%)
+}
+.footer__nav {
+    background-color: hsl(243, 87%, 12%);
+    color: hsl(0, 0%, 75%);
+    min-height: 250px;
+    padding: 50px 30px;
+}
+#logo {
+    color: hsl(0, 0%, 75%);
+    margin-bottom: 30px;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.navigation__contacts span {
+    display: flex;
+    margin-bottom: 15px;
+}
+span img, .footer__social--links > a {
+    margin-right: 10px;
+    height: 15px;
+}
+.bottom__item {
+    color: hsl(0, 0%, 75%);
+}
+.bottom__item:hover {
+    color: hsl(224, 93%, 58%);
+}
+
+@media screen and (max-width : 800px) {
+    #nav__links {
+        display: none;
+    }
+    header, main{
+        flex-direction: column-reverse;
+    }
+    .header__svg, .header__text {
+        flex: 1;
+    }
+    .header__svg > img, .main__svg > img  {
+        margin-bottom: 30px;
+    }
+    .header__text, .cta--btn, .signUp--cta, .main__text > h2{
+        text-align: center;
+        width: 100%;
+    }
+    .header__input, .signUp--cta, .navigation{
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 15px;
+        margin-right: 0px;
+        width: 100%;
+    }
+    main {
+        background-image: url("../images/bg-curve-mobile.svg");
+    }
+    .navigation, .navigation__contacts, .navigation > ul, .main__text, .quote {
+        width: 100%;
+    }
+    .navigation > ul {
+        margin-left: -80px;
+        margin-bottom: 30px;
+    }
+}
+
+
